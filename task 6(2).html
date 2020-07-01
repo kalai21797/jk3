@@ -1,0 +1,40 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+<style>
+#ab{
+padding:10px;
+text-align: center;
+}
+#bc{
+padding:10px;
+text-align: center;
+}
+#ef{
+padding:15px;
+text-align: center;
+}
+.se{
+padding:1px;
+}
+</style>
+<center><select class ="se"></center>
+<option value="Enabled">--select--</option>
+<option value="Enabled">User</option>
+<option value="disabled">Employee</option>
+</select>
+
+<div id="ab">
+USER NAME<input type="text" name="user" id="a"><br>
+</div>
+<div id="bc">
+PASSWORD<input type="password" name="password" id="b"><br>
+</div>
+
+<script>
+$('.se').on('change',function(){
+$('#b').attr('disabled',this.value!='Enabled');
+});
+</script>
+</body>
+</html>
