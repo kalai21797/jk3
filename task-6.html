@@ -1,0 +1,55 @@
+<html>
+<style>
+</style>
+<body>
+<center><h1>TASK 6</h1></center>
+<table>
+<tr><td>Employee Names:<input type="text" id="b" value="" placeholder="Please enter the name"></td></tr>
+<td><input type="submit" onclick="myFunction()"></td></tr>
+</table>
+<p id="xy"></p>
+<p id="jaga"></p>
+<p id="abi"></p>
+<p id="kalai"></p>
+<script>
+function myFunction(){
+var x=document.getElementById("b").value;
+var yb=x.split(",");
+var ya=yb.sort();
+var z=ya.length;
+
+var text="";
+for(i=0;i<=x.split(",").length;i++)
+{
+if(i==5){
+continue;
+}
+text+=x.split(",")[i]+'<br>';
+}
+document.getElementById("xy").innerHTML='<b>Employee Names:</b>'+'<br>'+text;
+
+var text="";
+for(i=0;i<=ya.length;i++)
+{
+if(i==5){
+continue;
+}
+text+=ya[i]+'<br>';
+}
+document.getElementById("jaga").innerHTML='<b>Sorted Employee Names:</b>'+'<br>'+text;
+
+document.getElementById("abi").innerHTML='<b>Array Length:</b>'+'<br>'+z;
+
+var value=ya[ya.length/2|0];
+document.getElementById("kalai").innerHTML='<b>Middle Name:</b>'+'<br>'+value;
+
+if(z%2==0){
+alert(' Array length : ' + z + '=> It Is an Even Number: ');
+}else{
+alert(' Array length : ' + z + '=> It Is an Odd Number: ');
+}
+
+}
+</script>
+</body>
+</html>
