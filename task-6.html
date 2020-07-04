@@ -43,6 +43,10 @@ document.getElementById("abi").innerHTML='<b>Array Length:</b>'+'<br>'+z;
 var value=ya[ya.length/2|0];
 document.getElementById("kalai").innerHTML='<b>Middle Name:</b>'+'<br>'+value;
 
+var val=value;
+ya=ya.filter(item=>item!==val)
+document.getElementById("kalai1").innerHTML='<b>Remaining Elements:</b>'+'<br>'+ya;
+  
 if(z%2==0){
 alert(' Array length : ' + z + '=> It Is an Even Number: ');
 }else{
